@@ -15,34 +15,34 @@ import sys
 tpl_dns_a_record_set = '''
 # terraform import dns_a_record_set.{name} {name}.{domain}.
 resource "dns_a_record_set" "{name}" {{
-    addresses = [
-        {addresses}
-    ]
-    name      = "{name}"
-    ttl       = {ttl}
-    zone      = "{domain}."
+  addresses = [
+    {addresses}
+  ]
+  name = "{name}"
+  ttl  = {ttl}
+  zone = "{domain}."
 }}
 '''
 
 tpl_dns_cname_record = '''
 # terraform import dns_cname_record.{name} {name}.{domain}.
 resource "dns_cname_record" "{name}" {{
-    cname     = "{cname}."
-    name      = "{name}"
-    ttl       = {ttl}
-    zone      = "{domain}."
+  cname = "{cname}."
+  name  = "{name}"
+  ttl   = {ttl}
+  zone  = "{domain}."
 }}
 '''
 
 tpl_dns_txt_record_set = '''
 # terraform import dns_txt_record_set.{name} {name}.{domain}.
 resource "dns_txt_record_set" "{name}" {{
-    name = "{name}"
-    txt = [
-        {strings}
-    ]
-    ttl = {ttl}
-    zone = "{domain}."
+  name = "{name}"
+  txt = [
+    {strings}
+  ]
+  ttl  = {ttl}
+  zone = "{domain}."
 }}
 '''
 
