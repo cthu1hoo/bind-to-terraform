@@ -13,7 +13,7 @@ Generates both configuration snippets and import commands. For now, only support
 ### Import existing resources into state file:
 
 ```
-grep '# import' zones.tf | sed 's/# //' | sh -
+grep '# terraform import' zones.tf | sed 's/# //' | sh -
 ```
 
 Adjust as necessary.
